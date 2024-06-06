@@ -1,5 +1,5 @@
-# QA-Interview-{Candidate}
-QA Interview assignment project for {Candidate}
+# QA-Interview-Ivanka
+QA Interview assignment project for Ivanka Dimitrova
 
 
 ## Weather 'application' overview
@@ -7,7 +7,7 @@ QA Interview assignment project for {Candidate}
 You are assigned to a team which is developing weather related application's **MVP** backend.
 Your task is to create automated tests for the **API that the application will use**.
 
-The MVP app will use one API, that tells the weather conditions for a fixed city. (Condition, description, temperatures ...etc.).
+The MVP app will use one API, that tells the weather conditions for a city (Always Vienna). (Condition, description, temperatures ...etc.).
 
 The API will return the following fields: `city`, `condition`, `icon`, `description` `conditionId` `tempInFahrenheit` and `tempInCelsius`
 
@@ -51,8 +51,8 @@ The API will return the following fields: `city`, `condition`, `icon`, `descript
 
 ### The API:
 
-The base url of the API is: `base_url`
-<br >**Eg.:** GET `base_url/weather`
+The base url of the API is: `https://backend-interview.tools.gcp.viesure.io`
+<br >**Eg.:** GET `https://backend-interview.tools.gcp.viesure.io/weather`
 
 **GET .../weather**
 * You can fetch the endpoint through  `{base_url}/weather` with the following data structure:
