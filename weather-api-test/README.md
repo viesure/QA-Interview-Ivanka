@@ -21,15 +21,21 @@ Prerequisites to run the tests:
 ## Test report generation
 After every test run completion, a detailed test report is generated automatically as a HTML document under:
     ``` ./target/test-reports/weather-api.html ```
-    [test report](./target/test-reports/weather-api.html)
 
 ### Remove generated report and classes
 To clean generated test report and classes, in current project folder (weather-api-test) execute following _maven_ command:
 ```mvn clean ``` 
 
 ### Test report results
-Example for already executed tests and generated report
+Parts from already executed tests and generated report:
 
-[weather-api-test-report-20240614-0832.html](weather-api-test-report-20240614-0832.html)
+![img.png](img.png)
+![img_1.png](img_1.png)
+
+Locally can be open previously generated report at :
+``` ./weather-api-test/weather-api-test-report-20240614-0832.html ```
+
+
+
 
 
