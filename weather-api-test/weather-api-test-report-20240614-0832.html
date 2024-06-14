@@ -1,0 +1,1444 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title></title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary"></span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Jun 14, 2024 08:32:59 AM</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="fail" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Test Get Weather API</p>
+            <p class="text-sm">
+              <span>8:33:01 AM</span> / <span>00:00:03:860</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Test Get Weather API</h5>
+<span class='badge badge-success'>06.14.2024 8:33:01 AM</span>
+<span class='badge badge-danger'>06.14.2024 8:33:04 AM</span>
+<span class='badge badge-default'>00:00:03:860</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"> Verify GET Weather API which is to be used by weather related application's MVP backend.</div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>Test city name is Vienna</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="io.viesure.dimitrova.WeatherApiStepDefinitions.getWeatherForecast()">
+                <span>When weather forecast is retrieved</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.viesure.dimitrova.WeatherApiStepDefinitions.validateResponseValuesExist()">
+                <span>Then all values in the response exist</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="io.viesure.dimitrova.WeatherApiStepDefinitions.validateCity()">
+                <span>And expected city name is Vienna</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: Expected city name is not Vienna. expected [Vienna] but found [vienna]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at io.viesure.dimitrova.WeatherApiStepDefinitions.validateCity(WeatherApiStepDefinitions.java:104)
+	at ✽.expected city name is Vienna(file:///D:/work_vania/remote_viesure/weather-api-test/src/test/resources/features_tests/weather_test.feature:7)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="6"><span class="badge log fail-bg mr-2">Fail</span>Test Fahrenheit and Celsius temperatures</div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="7"><span class="badge log fail-bg mr-2">Fail</span>Test Fahrenheit and Celsius temperatures</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given Fahrenheit temperature is set with value -1</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When weather forecast is retrieved</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then all values in the response exist</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>And expected Fahrenheit temperature is same as set value -1 and Celsius calculation is correct</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: Celsius temperature is not correct. expected [-18] but found [-19]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at io.viesure.dimitrova.WeatherApiStepDefinitions.validateTemperatures(WeatherApiStepDefinitions.java:69)
+	at ✽.expected Fahrenheit temperature is same as set value -1 and Celsius calculation is correct(file:///D:/work_vania/remote_viesure/weather-api-test/src/test/resources/features_tests/weather_test.feature:13)
+</textarea>
+      
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="12"><span class="badge log pass-bg mr-2">Pass</span>Test Fahrenheit and Celsius temperatures</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Fahrenheit temperature is set with value 0</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When weather forecast is retrieved</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then all values in the response exist</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And expected Fahrenheit temperature is same as set value 0 and Celsius calculation is correct</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="17"><span class="badge log fail-bg mr-2">Fail</span>Test Fahrenheit and Celsius temperatures</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given Fahrenheit temperature is set with value 1</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When weather forecast is retrieved</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then all values in the response exist</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>And expected Fahrenheit temperature is same as set value 1 and Celsius calculation is correct</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: Celsius temperature is not correct. expected [-17] but found [-18]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at io.viesure.dimitrova.WeatherApiStepDefinitions.validateTemperatures(WeatherApiStepDefinitions.java:69)
+	at ✽.expected Fahrenheit temperature is same as set value 1 and Celsius calculation is correct(file:///D:/work_vania/remote_viesure/weather-api-test/src/test/resources/features_tests/weather_test.feature:13)
+</textarea>
+      
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="22"><span class="badge log pass-bg mr-2">Pass</span>Test Fahrenheit and Celsius temperatures</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Fahrenheit temperature is set with value 32</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When weather forecast is retrieved</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then all values in the response exist</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And expected Fahrenheit temperature is same as set value 32 and Celsius calculation is correct</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="27"><span class="badge log fail-bg mr-2">Fail</span>Test Fahrenheit and Celsius temperatures</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given Fahrenheit temperature is set with value 75</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When weather forecast is retrieved</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then all values in the response exist</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>And expected Fahrenheit temperature is same as set value 75 and Celsius calculation is correct</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: Celsius temperature is not correct. expected [24] but found [23]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at io.viesure.dimitrova.WeatherApiStepDefinitions.validateTemperatures(WeatherApiStepDefinitions.java:69)
+	at ✽.expected Fahrenheit temperature is same as set value 75 and Celsius calculation is correct(file:///D:/work_vania/remote_viesure/weather-api-test/src/test/resources/features_tests/weather_test.feature:13)
+</textarea>
+      
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="32"><span class="badge log fail-bg mr-2">Fail</span>Test weather descriptions</div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="33"><span class="badge log fail-bg mr-2">Fail</span>Test weather descriptions</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given Celsius temperature value is -1</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When weather forecast is retrieved</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>When Celsius temperature -1 is set correctly</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: expected Celsius value is not set correctly so description suffix is compromised. expected [-1] but found [-2]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at io.viesure.dimitrova.WeatherApiStepDefinitions.validateCelsiusTemperatureCalculation(WeatherApiStepDefinitions.java:59)
+	at ✽.Celsius temperature -1 is set correctly(file:///D:/work_vania/remote_viesure/weather-api-test/src/test/resources/features_tests/weather_test.feature:25)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then all values in the response exist</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And expected description suffix is "freezing"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="39"><span class="badge log pass-bg mr-2">Pass</span>Test weather descriptions</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Celsius temperature value is 0</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When weather forecast is retrieved</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Celsius temperature 0 is set correctly</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then all values in the response exist</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And expected description suffix is "freezing"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="45"><span class="badge log pass-bg mr-2">Pass</span>Test weather descriptions</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Celsius temperature value is 1</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When weather forecast is retrieved</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Celsius temperature 1 is set correctly</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then all values in the response exist</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And expected description suffix is "cold"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="51"><span class="badge log fail-bg mr-2">Fail</span>Test weather descriptions</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given Celsius temperature value is 9</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When weather forecast is retrieved</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>When Celsius temperature 9 is set correctly</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: expected Celsius value is not set correctly so description suffix is compromised. expected [9] but found [8]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at io.viesure.dimitrova.WeatherApiStepDefinitions.validateCelsiusTemperatureCalculation(WeatherApiStepDefinitions.java:59)
+	at ✽.Celsius temperature 9 is set correctly(file:///D:/work_vania/remote_viesure/weather-api-test/src/test/resources/features_tests/weather_test.feature:25)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then all values in the response exist</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And expected description suffix is "cold"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="57"><span class="badge log fail-bg mr-2">Fail</span>Test weather descriptions</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given Celsius temperature value is 10</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When weather forecast is retrieved</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Celsius temperature 10 is set correctly</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then all values in the response exist</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>And expected description suffix is "mild"</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: 
+Expecting actual:
+  "The weather is cold"
+to end with:
+  "mild"
+
+	at io.viesure.dimitrova.WeatherApiStepDefinitions.validateSuffix(WeatherApiStepDefinitions.java:77)
+	at ✽.expected description suffix is "mild"(file:///D:/work_vania/remote_viesure/weather-api-test/src/test/resources/features_tests/weather_test.feature:27)
+</textarea>
+      
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="63"><span class="badge log pass-bg mr-2">Pass</span>Test weather descriptions</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Celsius temperature value is 11</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When weather forecast is retrieved</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Celsius temperature 11 is set correctly</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then all values in the response exist</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And expected description suffix is "mild"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="69"><span class="badge log fail-bg mr-2">Fail</span>Test weather descriptions</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given Celsius temperature value is 19</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When weather forecast is retrieved</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>When Celsius temperature 19 is set correctly</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: expected Celsius value is not set correctly so description suffix is compromised. expected [19] but found [18]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at io.viesure.dimitrova.WeatherApiStepDefinitions.validateCelsiusTemperatureCalculation(WeatherApiStepDefinitions.java:59)
+	at ✽.Celsius temperature 19 is set correctly(file:///D:/work_vania/remote_viesure/weather-api-test/src/test/resources/features_tests/weather_test.feature:25)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then all values in the response exist</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And expected description suffix is "mild"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="75"><span class="badge log fail-bg mr-2">Fail</span>Test weather descriptions</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given Celsius temperature value is 20</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When weather forecast is retrieved</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Celsius temperature 20 is set correctly</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then all values in the response exist</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>And expected description suffix is "warm"</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: 
+Expecting actual:
+  "The weather is "
+to end with:
+  "warm"
+
+	at io.viesure.dimitrova.WeatherApiStepDefinitions.validateSuffix(WeatherApiStepDefinitions.java:77)
+	at ✽.expected description suffix is "warm"(file:///D:/work_vania/remote_viesure/weather-api-test/src/test/resources/features_tests/weather_test.feature:27)
+</textarea>
+      
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="81"><span class="badge log fail-bg mr-2">Fail</span>Test weather descriptions</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given Celsius temperature value is 21</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When weather forecast is retrieved</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Celsius temperature 21 is set correctly</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then all values in the response exist</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>And expected description suffix is "warm"</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: 
+Expecting actual:
+  "The weather is "
+to end with:
+  "warm"
+
+	at io.viesure.dimitrova.WeatherApiStepDefinitions.validateSuffix(WeatherApiStepDefinitions.java:77)
+	at ✽.expected description suffix is "warm"(file:///D:/work_vania/remote_viesure/weather-api-test/src/test/resources/features_tests/weather_test.feature:27)
+</textarea>
+      
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="87"><span class="badge log fail-bg mr-2">Fail</span>Test weather descriptions</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given Celsius temperature value is 24</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When weather forecast is retrieved</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>When Celsius temperature 24 is set correctly</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: expected Celsius value is not set correctly so description suffix is compromised. expected [24] but found [23]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at io.viesure.dimitrova.WeatherApiStepDefinitions.validateCelsiusTemperatureCalculation(WeatherApiStepDefinitions.java:59)
+	at ✽.Celsius temperature 24 is set correctly(file:///D:/work_vania/remote_viesure/weather-api-test/src/test/resources/features_tests/weather_test.feature:25)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then all values in the response exist</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And expected description suffix is "warm"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="93"><span class="badge log pass-bg mr-2">Pass</span>Test weather descriptions</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Celsius temperature value is 25</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When weather forecast is retrieved</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Celsius temperature 25 is set correctly</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then all values in the response exist</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And expected description suffix is "hot"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="99"><span class="badge log pass-bg mr-2">Pass</span>Test weather descriptions</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Celsius temperature value is 26</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When weather forecast is retrieved</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Celsius temperature 26 is set correctly</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then all values in the response exist</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And expected description suffix is "hot"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="105"><span class="badge log pass-bg mr-2">Pass</span>Test weather conditions</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="106"><span class="badge log pass-bg mr-2">Pass</span>Test weather conditions</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given condition id is set with value 1</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When weather forecast is retrieved</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then all values in the response exist</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And expected condition is "clear"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="111"><span class="badge log pass-bg mr-2">Pass</span>Test weather conditions</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given condition id is set with value 2</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When weather forecast is retrieved</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then all values in the response exist</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And expected condition is "windy"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="116"><span class="badge log pass-bg mr-2">Pass</span>Test weather conditions</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given condition id is set with value 3</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When weather forecast is retrieved</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then all values in the response exist</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And expected condition is "mist"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="121"><span class="badge log pass-bg mr-2">Pass</span>Test weather conditions</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given condition id is set with value 4</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When weather forecast is retrieved</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then all values in the response exist</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And expected condition is "drizzle"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="126"><span class="badge log pass-bg mr-2">Pass</span>Test weather conditions</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given condition id is set with value 5</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When weather forecast is retrieved</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then all values in the response exist</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And expected condition is "dust"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="131"><span class="badge log fail-bg mr-2">Fail</span>Test weather icon names</div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="132"><span class="badge log pass-bg mr-2">Pass</span>Test weather icon names</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given condition id is set with value 1</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When weather forecast is retrieved</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then all values in the response exist</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And expected icon name is "clear"".png"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="137"><span class="badge log pass-bg mr-2">Pass</span>Test weather icon names</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given condition id is set with value 2</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When weather forecast is retrieved</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then all values in the response exist</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And expected icon name is "windy"".png"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="142"><span class="badge log pass-bg mr-2">Pass</span>Test weather icon names</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given condition id is set with value 3</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When weather forecast is retrieved</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then all values in the response exist</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And expected icon name is "mist"".png"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="147"><span class="badge log fail-bg mr-2">Fail</span>Test weather icon names</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given condition id is set with value 4</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When weather forecast is retrieved</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then all values in the response exist</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>And expected icon name is "drizzle"".png"</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: expected [drizzle.png] but found [drizzle.jpeg]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at io.viesure.dimitrova.WeatherApiStepDefinitions.validateIconName(WeatherApiStepDefinitions.java:88)
+	at ✽.expected icon name is "drizzle"".png"(file:///D:/work_vania/remote_viesure/weather-api-test/src/test/resources/features_tests/weather_test.feature:61)
+</textarea>
+      
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="152"><span class="badge log pass-bg mr-2">Pass</span>Test weather icon names</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given condition id is set with value 5</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When weather forecast is retrieved</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then all values in the response exist</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And expected icon name is "dust"".png"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>12</span>
+</span>
+<p class="name">java.lang.AssertionError</p>
+<p class="duration text-sm">12 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.lang.AssertionError</h4>
+<span status="fail" class='badge log badge-danger'>12 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>08:33:02 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='5'>And expected city name is Vienna</a>
+<div class="">
+<span class="badge badge-default">Test Get Weather API.Test city name is Vienna.And expected city name is Vienna</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>08:33:02 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='11'>And expected Fahrenheit temperature is same as set value -1 and Celsius calculation is correct</a>
+<div class="">
+<span class="badge badge-default">Test Get Weather API.Test Fahrenheit and Celsius temperatures.And expected Fahrenheit temperature is same as set value -1 and Celsius calculation is correct</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>08:33:02 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='21'>And expected Fahrenheit temperature is same as set value 1 and Celsius calculation is correct</a>
+<div class="">
+<span class="badge badge-default">Test Get Weather API.Test Fahrenheit and Celsius temperatures.And expected Fahrenheit temperature is same as set value 1 and Celsius calculation is correct</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>08:33:03 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='31'>And expected Fahrenheit temperature is same as set value 75 and Celsius calculation is correct</a>
+<div class="">
+<span class="badge badge-default">Test Get Weather API.Test Fahrenheit and Celsius temperatures.And expected Fahrenheit temperature is same as set value 75 and Celsius calculation is correct</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>08:33:03 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='36'>When Celsius temperature -1 is set correctly</a>
+<div class="">
+<span class="badge badge-default">Test Get Weather API.Test weather descriptions.When Celsius temperature -1 is set correctly</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>08:33:03 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='54'>When Celsius temperature 9 is set correctly</a>
+<div class="">
+<span class="badge badge-default">Test Get Weather API.Test weather descriptions.When Celsius temperature 9 is set correctly</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>08:33:03 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='62'>And expected description suffix is "mild"</a>
+<div class="">
+<span class="badge badge-default">Test Get Weather API.Test weather descriptions.And expected description suffix is "mild"</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>08:33:03 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='72'>When Celsius temperature 19 is set correctly</a>
+<div class="">
+<span class="badge badge-default">Test Get Weather API.Test weather descriptions.When Celsius temperature 19 is set correctly</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>08:33:03 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='80'>And expected description suffix is "warm"</a>
+<div class="">
+<span class="badge badge-default">Test Get Weather API.Test weather descriptions.And expected description suffix is "warm"</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>08:33:03 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='86'>And expected description suffix is "warm"</a>
+<div class="">
+<span class="badge badge-default">Test Get Weather API.Test weather descriptions.And expected description suffix is "warm"</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>08:33:04 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='90'>When Celsius temperature 24 is set correctly</a>
+<div class="">
+<span class="badge badge-default">Test Get Weather API.Test weather descriptions.When Celsius temperature 24 is set correctly</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>08:33:04 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='151'>And expected icon name is "drizzle"".png"</a>
+<div class="">
+<span class="badge badge-default">Test Get Weather API.Test weather icon names.And expected icon name is "drizzle"".png"</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Jun 14, 2024 08:32:59 AM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Jun 14, 2024 08:33:04 AM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>0</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>1</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='0%'>
+<b>0</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='100%'><b>1</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='57%'><b>16</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='42%'><b>12</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='83%'><b>103</b> steps passed</small></div>
+<div>
+<small data-tooltip='9%'><b>12</b> steps failed,
+<b>8</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Test Get Weather API":3.86
+};
+</script>
+<div class="row">
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 0,
+failParent: 1,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 16,
+failChild: 12,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 103,
+failGrandChild: 12,
+warningGrandChild: 0,
+skipGrandChild: 8,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>
