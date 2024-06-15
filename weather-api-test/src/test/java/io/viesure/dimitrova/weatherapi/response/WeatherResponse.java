@@ -1,4 +1,4 @@
-package io.viesure.dimitrova.response;
+package io.viesure.dimitrova.weatherapi.response;
 
 public record WeatherResponse(
         String city,

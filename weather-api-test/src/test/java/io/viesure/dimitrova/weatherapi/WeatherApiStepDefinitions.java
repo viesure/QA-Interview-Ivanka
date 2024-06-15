@@ -1,10 +1,10 @@
-package io.viesure.dimitrova;
+package io.viesure.dimitrova.weatherapi;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.viesure.dimitrova.response.WeatherResponse;
+import io.viesure.dimitrova.weatherapi.response.WeatherResponse;
 import org.apache.hc.client5.http.fluent.Request;
 import org.apache.hc.client5.http.fluent.Response;
 import org.apache.hc.core5.http.ContentType;
